@@ -15,6 +15,7 @@ import { useState, useEffect } from "react";
 // ─────────────────────────────────────────────
 
 const NAV_LINKS = ["Home", "Services", "About Us", "Plans", "Resources", "Contact"];
+const PLAYFAIR = "'Playfair Display', Georgia, serif";
 
 
 
@@ -179,8 +180,8 @@ export default function BarberLandingPage() {
               </p>
 
               {/* Headline */}
-              <h1
-                className="animate-fade-up-2 lg:text-[72px] md:text-[55px] text-[38px] text-white font-bold leading-[1.08] mb-6">
+              <h1 style={{ fontFamily: PLAYFAIR, fontSize: "clamp(38px, 5.5vw, 72px)" }}
+                className="animate-fade-up-2  lg:text-[72px] md:text-[55px] text-[38px] text-white font-bold leading-[1.08] mb-6">
                 Style That Defines
 <br />
                 Your
