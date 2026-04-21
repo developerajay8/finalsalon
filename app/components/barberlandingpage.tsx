@@ -183,7 +183,7 @@ const handleScrollservices = (id: string) => {
       <section id="home"
         className="relative min-h-screen flex flex-col justify-between animate-fade-in"
         style={{
-          backgroundImage:    "url('/image.png')",
+          backgroundImage:    "url('/image 5.png')",
           backgroundSize:     "cover",
           backgroundPosition: "center top",
           backgroundRepeat:   "no-repeat",
