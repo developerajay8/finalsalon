@@ -47,25 +47,7 @@ export default function BarberLandingPage() {
 
           {/* ── Logo ── */}
           <div className="flex items-center gap-3 shrink-0">
-            <div className="w-9 h-9 rounded-full border border-[#C9A04C]/60 flex items-center justify-center shrink-0">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A04C" strokeWidth="1.8" strokeLinecap="round">
-                <circle cx="6" cy="6" r="3" />
-                <circle cx="6" cy="18" r="3" />
-                <line x1="20" y1="4" x2="8.12" y2="15.88" />
-                <line x1="14.47" y1="14.48" x2="20" y2="20" />
-                <line x1="8.12" y1="8.12" x2="12" y2="12" />
-              </svg>
-            </div>
-            <div className="leading-none">
-              <p className="text-[#C9A04C] text-[11px] font-semibold tracking-[0.22em] uppercase"
-                font-sans >
-                Barber
-              </p>
-              <p className="text-white text-[15px] font-bold tracking-[0.18em] font-sans uppercase"
-                 >
-                Shop
-              </p>
-            </div>
+            <img src="/image copy 1.png" className="w-[80px]" alt="" />
           </div>
 
           {/* ── Desktop Nav ── */}
@@ -173,7 +155,7 @@ export default function BarberLandingPage() {
       <section
         className="relative min-h-screen flex flex-col justify-between animate-fade-in"
         style={{
-          backgroundImage:    "url('/hero-bg.jpg')",
+          backgroundImage:    "url('/image.png')",
           backgroundSize:     "cover",
           backgroundPosition: "center top",
           backgroundRepeat:   "no-repeat",

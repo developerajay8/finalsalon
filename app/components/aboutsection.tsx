@@ -259,7 +259,7 @@ export default function AboutServices() {
 
               {/* ── Replace with your actual image ── */}
               <img
-                src="/about-img.jpg"
+                src="/about.png"
                 alt="Style N Razors — Expert Grooming"
                 className="w-full h-full object-cover block"
               />
