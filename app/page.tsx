@@ -3,6 +3,9 @@ import BarberLandingPage from "./components/barberlandingpage";
 import AboutServices from "./components/aboutsection";
 import GallerySection from "./components/gallerysection";
 import MenuSection from "./components/menusections";
+import StatsTeamReviews from "./components/statsteamreview";
+import ContactSection from "./components/contactsection";
+import FooterSection from "./components/footersection";
 export default function Home() {
   return (
     <div>
@@ -10,6 +13,9 @@ export default function Home() {
       <AboutServices/>
       <GallerySection/>
       <MenuSection/>
+      <StatsTeamReviews/>
+      <ContactSection/>
+      <FooterSection/>
     </div>
   );
 }
