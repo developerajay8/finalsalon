@@ -175,6 +175,10 @@ function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
 export default function GallerySection() {
   const [headRef, headVisible] = useInView(0.1);
 
+const handleScrolls = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
   return (
     <section className="bg-[#100c06] py-[100px]">
 
@@ -233,7 +237,7 @@ export default function GallerySection() {
 
         {/* ── View All Button ── */}
         <div className="text-center mt-[54px]">
-          <button
+          <button onClick={() => handleScrolls("contact")}
             className="bg-transparent border border-[#C9A04C]/45 text-[#C9A04C]
               text-[11px] font-bold tracking-[0.22em] uppercase
               px-11 py-[15px] rounded-sm cursor-pointer

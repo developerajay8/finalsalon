@@ -353,9 +353,9 @@ export default function FooterSection() {
       >
         <div className="stats-grid">
           {[
-            { value: 12000, suffix: "+", label: "Happy Clients", icon: "👤" },
-            { value: 15, suffix: " Yrs", label: "Experience", icon: "✦" },
-            { value: 8, suffix: "", label: "Expert Barbers", icon: "✂" },
+            { value: 3000, suffix: "+", label: "Happy Clients", icon: "👤" },
+            { value: 4, suffix: " Yrs", label: "Experience", icon: "✦" },
+            { value: 12, suffix: "", label: "Expert Barbers", icon: "✂" },
             { value: 4.9, suffix: "★", label: "Average Rating", icon: "★", isDecimal: true },
           ].map((s, i) => (
             <div key={i} className="stat-card">

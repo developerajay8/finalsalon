@@ -14,7 +14,14 @@ import { useState, useEffect } from "react";
 //  3. BG image → place at /public/hero-bg.jpg
 // ─────────────────────────────────────────────
 
-const NAV_LINKS = ["Home", "Services", "About Us", "Plans", "Resources", "Contact"];
+const NAV_LINKS = [
+  { label: "Home", id: "home" },
+  { label: "Services", id: "services" },
+  { label: "About Us", id: "about" },
+  { label: "Plans", id: "plans" },
+  { label: "Resources", id: "resources" },
+  { label: "Contact", id: "contact" },
+];
 const PLAYFAIR = "'Playfair Display', Georgia, serif";
 
 
@@ -29,6 +36,29 @@ export default function BarberLandingPage() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleScroll = (id: string) => {
+  setActive(id);
+
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
+  setMobileOpen(false);
+};
+
+const handleScrolls = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
+const handleScrollservices = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
 
   return (
     <div className="min-h-screen bg-[#100c06] font-sans">
@@ -53,32 +83,28 @@ export default function BarberLandingPage() {
 
           {/* ── Desktop Nav ── */}
           <nav className="hidden lg:flex items-center gap-7">
-            {NAV_LINKS.map((link) => (
-              <span
-                key={link}
-                onClick={() => setActive(link)}
-                className={[
-                  // base
-                  "relative text-[13.5px] font-medium tracking-[0.025em] cursor-pointer pb-[3px]",
-                  "transition-colors duration-200",
-                  // ::after underline via Tailwind pseudo
-                  "after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C9A04C]",
-                  "after:transition-all after:duration-300",
-                  // active vs default
-                  active === link
-                    ? "text-[#C9A04C] after:w-full"
-                    : "text-white/82 hover:text-white after:w-0 hover:after:w-full",
-                ].join(" ")}
-              >
-                {link}
-              </span>
-            ))}
-          </nav>
-
+  {NAV_LINKS.map((link) => (
+    <span
+      key={link.id}
+      onClick={() => handleScroll(link.id)}
+      className={[
+        "relative text-[13.5px] font-medium tracking-[0.025em] cursor-pointer pb-[3px]",
+        "transition-colors duration-200",
+        "after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C9A04C]",
+        "after:transition-all after:duration-300",
+        active === link.id
+          ? "text-[#C9A04C] after:w-full"
+          : "text-white/82 hover:text-white after:w-0 hover:after:w-full",
+      ].join(" ")}
+    >
+      {link.label}
+    </span>
+  ))}
+</nav>
           {/* ── CTA + Hamburger ── */}
           <div className="flex items-center gap-4">
             {/* Gold button */}
-            <button
+            <button onClick={() => handleScrolls("contact")}
               className="hidden sm:block text-sm px-5 py-2.5 rounded-sm font-semibold tracking-[0.04em]
                          bg-[#C9A04C] text-[#100c06]
                          hover:bg-[#ddb35c] hover:-translate-y-px hover:shadow-[0_6px_24px_rgba(201,160,76,0.35)]
@@ -119,24 +145,25 @@ export default function BarberLandingPage() {
           ].join(" ")}
         >
           <div className="bg-[#0d0904]/98 px-8 pb-6 pt-2 flex flex-col gap-5 border-t border-[#C9A04C]/20">
-            {NAV_LINKS.map((link) => (
-              <span
-                key={link}
-                onClick={() => { setActive(link); setMobileOpen(false); }}
-                className={[
-                  "relative text-sm font-medium tracking-[0.025em] cursor-pointer pb-[3px]",
-                  "transition-colors duration-200",
-                  "after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C9A04C]",
-                  "after:transition-all after:duration-300",
-                  active === link
-                    ? "text-[#C9A04C] after:w-full"
-                    : "text-white/82 hover:text-white after:w-0 hover:after:w-full",
-                ].join(" ")}
-              >
-                {link}
-              </span>
-            ))}
-            <button
+           
+  {NAV_LINKS.map((link) => (
+    <span
+      key={link.id}
+      onClick={() => handleScroll(link.id)}
+      className={[
+        "relative text-sm font-medium tracking-[0.025em] cursor-pointer pb-[3px]",
+        "transition-colors duration-200",
+        "after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:bg-[#C9A04C]",
+        "after:transition-all after:duration-300",
+        active === link.id
+          ? "text-[#C9A04C] after:w-full"
+          : "text-white/82 hover:text-white after:w-0 hover:after:w-full",
+      ].join(" ")}
+    >
+      {link.label}
+    </span>
+  ))}
+            <button onClick={() => handleScrolls("contact")}
               className="text-sm px-5 py-2.5 rounded-sm font-semibold tracking-[0.04em] w-fit mt-1
                          bg-[#C9A04C] text-[#100c06]
                          hover:bg-[#ddb35c] hover:-translate-y-px
@@ -153,7 +180,7 @@ export default function BarberLandingPage() {
            HERO SECTION
            BG image → /public/hero-bg.jpg
       ════════════════════════════════════════ */}
-      <section
+      <section id="home"
         className="relative min-h-screen flex flex-col justify-between animate-fade-in"
         style={{
           backgroundImage:    "url('/image.png')",
@@ -198,7 +225,7 @@ export default function BarberLandingPage() {
 
               {/* CTAs */}
               <div className="animate-fade-up-3 flex flex-wrap gap-4 items-center">
-                <button
+                <button onClick={() => handleScrolls("contact")}
                   className="text-sm px-7 py-3 rounded-sm font-semibold tracking-[0.04em]
                              bg-[#C9A04C] text-[#100c06]
                              hover:bg-[#ddb35c] hover:-translate-y-px hover:shadow-[0_6px_24px_rgba(201,160,76,0.35)]
@@ -207,7 +234,7 @@ export default function BarberLandingPage() {
                 >
                   Get a Free Quote
                 </button>
-                <button
+                <button onClick={() => handleScrollservices("services")}
                   className="text-sm font-medium px-7 py-3 rounded-sm
                              text-white/80 border border-white/25
                              hover:border-[#C9A04C]/60 hover:text-[#C9A04C]
@@ -242,7 +269,7 @@ export default function BarberLandingPage() {
                     Location
                   </p>
                   <p className="text-white/75 text-sm leading-relaxed font-sans">
-                    23 Main Street, Cityville,<br />Stateburg, 98765
+                    Shop No 2, Plot No. 403, 404,80 Feet Road, <br />Near Hanuman Mandir, Kanta, Jhotwara, Jaipur-12
                   </p>
                 </div>
               </div>
@@ -260,7 +287,7 @@ export default function BarberLandingPage() {
                     Contact
                   </p>
                   <p className="text-white/75 text-sm leading-relaxed font-sans">
-                    (123) 456-7890<br />
+                    +91 95094 84341<br />
                     hello@thegentlemanshair.com
                   </p>
                 </div>

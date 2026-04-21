@@ -51,8 +51,34 @@ export default function ContactSection() {
       ? { borderColor: "#C9A04C", background: "rgba(201,160,76,0.07)" }
       : {};
 
+
+      const handleSubmit = async () => {
+  try {
+    await fetch("https://script.google.com/macros/s/AKfycbyrKCB_sIv9_I_FwwzjzJOXqCq3FhZi1EOvVKBYLFH4m23r2t0VSxtTNKkXggASEYzr/exec", {
+      method: "POST",
+      body: JSON.stringify(form),
+    });
+
+    // 👇 YEH YAHAN HOGA (important)
+    setSent(true);
+
+    // WhatsApp
+    const message = `New Appointment:
+Name: ${form.name}
+Phone: ${form.phone}
+Service: ${form.service}
+Date: ${form.date}`;
+
+    window.open(`https://wa.me/+919509484341?text=${encodeURIComponent(message)}`, "_blank");
+
+  } catch (err) {
+    console.error(err);
+  }
+};
+
   return (
     <section
+    id="contact"
       ref={sectionRef}
       style={{ background: "#0d0904", position: "relative", overflow: "hidden" }}
     >
@@ -337,7 +363,7 @@ export default function ContactSection() {
               />
 
               {/* Submit */}
-              <button className="submit-btn" onClick={() => setSent(true)}>
+              <button className="submit-btn" onClick={handleSubmit}>
                 Appointment Now
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                   <line x1="5" y1="12" x2="19" y2="12" />

@@ -23,10 +23,10 @@ function useInView(threshold = 0.12) {
 
 // ── Data ──
 const stats = [
-  { label: "Styles Created",       display: "23k" },
-  { label: "Professional Barbers", display: "19+" },
-  { label: "Years of Excellence",  display: "15"  },
-  { label: "Clients Served",       display: "2M"  },
+  { label: "Styles Created",       display: "3k" },
+  { label: "Professional Barbers", display: "12+" },
+  { label: "Years of Excellence",  display: "4"  },
+  { label: "Clients Served",       display: "4K"  },
 ];
 
 const barbers = [
@@ -121,7 +121,7 @@ export default function StatsTeamReviews() {
   const revCard   = useInView(0.1);
 
   return (
-    <div style={{ fontFamily: INTER }}>
+    <div id="resources" style={{ fontFamily: INTER }}>
 
       {/* ═══════════════════════════════════════
            1. GALLERY GRID

@@ -233,6 +233,7 @@ function ServiceRow({ item, index }) {
   const [hovered, setHovered] = useState(false);
   return (
     <div
+    id="plans"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
