@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, ReactNode } from "react";
+const PLAYFAIR = "'Playfair Display', Georgia, serif";
 
 /* ──────────────────────────────────────────
    Scroll-reveal hook
@@ -302,7 +303,7 @@ export default function AboutServices() {
               <h2
                 className="text-white font-bold mb-3 leading-[1.1]"
                 style={{
-                  
+                  fontFamily: PLAYFAIR,
                   fontSize: "clamp(28px, 3.5vw, 44px)",
                 }}
               >
@@ -402,8 +403,9 @@ Of <span className="text-[#C9A04C]">Modern Elegance</span>
             {/* Exact heading from screenshot */}
             <h2
               className="text-white font-bold mb-4 leading-[1.08]"
+              
               style={{
-                
+                fontFamily: PLAYFAIR,
                 fontSize: "clamp(30px, 4vw, 52px)",
               }}
             >

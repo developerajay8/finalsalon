@@ -148,7 +148,7 @@ export default function ContactSection() {
         {/* ── Centre form ── */}
         <div
           style={{
-            background: "#C9A04C",
+            background: "#805808",
             padding: "68px 52px",
             display: "flex",
             flexDirection: "column",
