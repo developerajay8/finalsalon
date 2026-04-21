@@ -38,10 +38,10 @@ interface ServiceItem {
 ────────────────────────────────────────── */
 const SERVICES: ServiceItem[] = [
   {
-    title: "Classic Haircut",
-    desc:  "Precision cut tailored to your face shape and lifestyle — clean, sharp, confident.",
-    price: "₹149",
-    tag:   "Male",
+    title: "Hair Cut & Styling",
+    desc:  "Expert haircuts and creative styling for men and women, customized to enhance your natural features.",
+    price: "₹199+",
+    tag:   "Unisex",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -53,10 +53,10 @@ const SERVICES: ServiceItem[] = [
     ),
   },
   {
-    title: "Beard Trim & Shape",
-    desc:  "Expert sculpting with a straight razor to define your jawline and personal style.",
-    price: "₹49",
-    tag:   "Male",
+    title: "Grooming & Shaving",
+    desc:  "Luxury beard trims, traditional hot towel shaves, and grooming for the modern gentleman.",
+    price: "₹99+",
+    tag:   "He",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -65,10 +65,10 @@ const SERVICES: ServiceItem[] = [
     ),
   },
   {
-    title:   "Bridal Makeup",
-    desc:    "Air Brush, Mac HD & Bobby Brown — flawless looks for your most special day.",
-    price:   "₹6999+",
-    tag:     "Female",
+    title:   "Premium Makeup",
+    desc:    "Flawless bridal, party, and editorial makeup services using high-end global brands.",
+    price:   "₹2499+",
+    tag:     "She",
     popular: true,
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -78,10 +78,10 @@ const SERVICES: ServiceItem[] = [
     ),
   },
   {
-    title: "Keratin Treatment",
-    desc:  "Frizz-free, silky smooth hair with L'Oreal & Matrix professional smoothening.",
-    price: "₹1499+",
-    tag:   "Female",
+     title: "Advanced Hair Care",
+    desc:  "Professional Keratin, Smoothening, and deep conditioning treatments for healthy, lustrous hair.",
+    price: "₹1999+",
+    tag:   "Unisex",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -90,9 +90,9 @@ const SERVICES: ServiceItem[] = [
     ),
   },
   {
-    title: "Hair Spa & D-Tan",
-    desc:  "Deep conditioning hair spa + full D-Tan treatment for glowing, nourished skin.",
-    price: "₹399+",
+    title: "Skin & Facial Rituals",
+    desc:  "Organic and medical-grade facials designed to rejuvenate, brighten, and heal your skin.",
+    price: "₹499+",
     tag:   "Unisex",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -103,10 +103,10 @@ const SERVICES: ServiceItem[] = [
     ),
   },
   {
-    title:   "Royal Package",
-    desc:    "Cut + beard + hot towel shave + scalp massage — the complete salon experience.",
-    price:   "₹999+",
-    tag:     "Unisex",
+     title:   "He & She Luxury Combo",
+    desc:    "Our all-inclusive package featuring premium hair care, skin revitalization, and a relaxing spa experience.",
+    price:   "₹1499+",
+    tag:     "Top Pick",
     popular: true,
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -121,12 +121,12 @@ const SERVICES: ServiceItem[] = [
    Feature check list items
 ────────────────────────────────────────── */
 const FEATURES = [
-  "Premium Hair Treatments",
-  "Bridal Makeup Studio",
-  "L'Oreal & Matrix Products",
-  "Wax & Bleach Specialist",
-  "Expert Beard Styling",
-  "Walk-ins Welcome",
+  "Premium Unisex Services",
+  "Luxury Bridal Packages",
+  "Advanced Skin Aesthetics",
+  "Keratin & Hair Botox",
+  "Expert Global Coloring",
+  "Modern & Hygienic Setup",
 ];
 
 /* ──────────────────────────────────────────
@@ -241,7 +241,7 @@ export default function AboutServices() {
   return (
     <>
       {/* ════════════════════════════════
-           ABOUT SECTION
+            ABOUT SECTION
       ════════════════════════════════ */}
       <section id="about" className="bg-[#100c06] py-20 md:py-28 overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16">
@@ -260,7 +260,7 @@ export default function AboutServices() {
               {/* ── Replace with your actual image ── */}
               <img
                 src="/about.png"
-                alt="Style N Razors — Expert Grooming"
+                alt="He & She Salon — The Gold Standard of Grooming"
                 className="w-full h-full object-cover block"
               />
 
@@ -273,13 +273,13 @@ export default function AboutServices() {
                   className="text-[#C9A04C] font-bold text-lg leading-none mb-1"
                   
                 >
-                  15+
+                  12+
                 </p>
                 <p
                   className="text-white/55 text-xs tracking-[0.12em] uppercase"
                   
                 >
-                  Years of Excellence
+                  Years of Style
                 </p>
               </div>
             </div>
@@ -295,10 +295,10 @@ export default function AboutServices() {
                 className="text-[#C9A04C] text-xs font-semibold tracking-[0.28em] uppercase mb-4"
                 
               >
-                About Us
+                Our Story
               </p>
 
-              {/* Headline — exact match to screenshot */}
+              {/* Headline */}
               <h2
                 className="text-white font-bold mb-3 leading-[1.1]"
                 style={{
@@ -306,8 +306,8 @@ export default function AboutServices() {
                   fontSize: "clamp(28px, 3.5vw, 44px)",
                 }}
               >
-                Experience The Art<br />
-                Of <span className="text-[#C9A04C]">Grooming</span>
+                Redefining the Standard<br />
+Of <span className="text-[#C9A04C]">Modern Elegance</span>
               </h2>
 
               {/* Tagline */}
@@ -315,29 +315,24 @@ export default function AboutServices() {
                 className="text-white/55 text-sm italic mb-6"
                 
               >
-                We&rsquo;re more than just a salon — we&rsquo;re a lifestyle destination
+                He & She Salon — Where trend meets tradition for a flawless you.
               </p>
 
               {/* Gold divider */}
               <div className="w-12 h-0.5 bg-[#C9A04C] mb-6" />
 
-              {/* Body copy — matches screenshot paragraph */}
+              {/* Body copy */}
               <p
                 className="text-white/70 text-sm md:text-base leading-[1.8] mb-4"
                 
               >
-                At Style N Razors, our mission is to redefine the modern grooming experience.
-                From classic haircuts to signature beard trims, from bridal makeup to premium
-                hair treatments — we bring precision, passion, and personal care to every
-                client who sits in our chair.
+                At He & She Salon, we believe that self-care is a necessity, not a luxury. We provide a sanctuary where both men and women can enjoy high-end grooming services tailored to their unique style and personality.
               </p>
               <p
                 className="text-white/55 text-sm leading-[1.75] mb-8"
                 
               >
-                Located at 80 Feet Road, Jhotwara, Jaipur — our unisex salon &amp; makeup studio
-                serves both men and women with a complete range of grooming and beauty services
-                using L&rsquo;Oreal, Matrix, VLCC, O3 and other premium brands.
+                Our team of master stylists and therapists use world-class techniques and premium products to ensure you walk out feeling confident, refreshed, and truly transformed.
               </p>
 
               {/* Feature checklist */}
@@ -367,7 +362,7 @@ export default function AboutServices() {
                   hover:bg-[#ddb35c] hover:-translate-y-px hover:shadow-[0_6px_24px_rgba(201,160,76,0.35)]"
                 
               >
-                Get a Free Quote
+                Book Your Session
               </button>
             </div>
 
@@ -376,7 +371,7 @@ export default function AboutServices() {
       </section>
 
       {/* ════════════════════════════════
-           OUR SIGNATURE SERVICES
+            OUR SIGNATURE SERVICES
       ════════════════════════════════ */}
       <section id="services" className="bg-[#0d0a05] py-20 md:py-28 overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16">
@@ -401,7 +396,7 @@ export default function AboutServices() {
               className="text-[#C9A04C] text-[10px] font-bold tracking-[0.35em] uppercase mb-3"
               
             >
-              What We Offer
+              Elite Selection
             </p>
 
             {/* Exact heading from screenshot */}
@@ -412,7 +407,7 @@ export default function AboutServices() {
                 fontSize: "clamp(30px, 4vw, 52px)",
               }}
             >
-              Our Signature <span className="text-[#C9A04C]">Services</span>
+              He & She <span className="text-[#C9A04C]">Signature Services</span>
             </h2>
 
             {/* Exact sub from screenshot */}
@@ -420,7 +415,7 @@ export default function AboutServices() {
               className="text-white/50 text-sm md:text-base max-w-[420px] mx-auto leading-[1.7]"
               
             >
-              Tailored grooming solutions for every style
+              Premium grooming experiences designed for him and her.
             </p>
           </div>
 
@@ -443,13 +438,13 @@ export default function AboutServices() {
                 className="text-white font-bold mb-1.5"
                 style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px" }}
               >
-                Not sure what you need?
+                Seeking a custom transformation?
               </p>
               <p
                 className="text-white/50 text-sm"
                 
               >
-                Walk in or call us — our experts will guide you to the perfect look.
+                Consult with our stylists today and find the look that defines you.
               </p>
             </div>
 
@@ -484,14 +479,13 @@ export default function AboutServices() {
       <div className="bg-[#080603]" style={{
         borderTop: "1px solid rgba(201,160,76,0.2)",
         borderBottom: "1px solid rgba(201,160,76,0.2)",
-        // background: "rgba(201,160,76,0.04)",
         padding: "14px 0",
         overflow: "hidden",
       }}>
         <div className="marquee-track">
           {[...Array(2)].map((_, ri) => (
             <div key={ri} style={{ display: "flex", gap: "0", alignItems: "center" }}>
-              {["Premium Grooming", "Expert Barbers", "Hot Towel Shave", "Skin Fade Specialists", "Walk-Ins Welcome", "Est. 2010", "Jaipur's Finest"].map((t, i) => (
+              {["He & She Luxury", "Expert Stylists", "Bridal Glow", "Skin Rejuvenation", "Unisex Perfection", "Since 2012", "Signature Grooming"].map((t, i) => (
                 <span key={i} style={{ display: "flex", alignItems: "center", gap: "0" }}>
                   <span style={{
                     fontFamily: "'Playfair Display', serif",

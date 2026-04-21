@@ -402,23 +402,7 @@ export default function FooterSection() {
           <div style={col(0.1)}>
             {/* Logo */}
             <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "22px" }}>
-              <div style={{
-                width: "44px", height: "44px",
-                borderRadius: "50%",
-                border: "1px solid rgba(201,160,76,0.5)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-              }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A04C" strokeWidth="1.6" strokeLinecap="round">
-                  <circle cx="6" cy="6" r="3" /><circle cx="6" cy="18" r="3" />
-                  <line x1="20" y1="4" x2="8.12" y2="15.88" />
-                  <line x1="14.47" y1="14.48" x2="20" y2="20" />
-                  <line x1="8.12" y1="8.12" x2="12" y2="12" />
-                </svg>
-              </div>
-              <div>
-                <p style={{ color: "#C9A04C", fontSize: "10px", fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", fontFamily: "'Inter', sans-serif", margin: 0 }}>Barber</p>
-                <p style={{ color: "#fff", fontSize: "16px", fontWeight: 800, letterSpacing: "0.18em", textTransform: "uppercase", fontFamily: "'Playfair Display', serif", margin: 0 }}>Shop</p>
-              </div>
+              <img src="/image copy 1.png" className="w-[100]" alt="" />
             </div>
 
             <p style={{
@@ -580,7 +564,7 @@ export default function FooterSection() {
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
                     </svg>
                   ),
-                  text: "23 Main Street, Jaipur, Rajasthan 302001",
+                  text: "Shop No 2, Plot No. 403, 404,80 Feet Road, Near Hanuman Mandir, Kanta, Jhotwara, Jaipur-12",
                 },
                 {
                   icon: (
@@ -588,7 +572,7 @@ export default function FooterSection() {
                       <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.03 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
                     </svg>
                   ),
-                  text: "+91 12345 67890",
+                  text: "+91 95094 84341",
                 },
                 {
                   icon: (

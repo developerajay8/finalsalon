@@ -175,15 +175,16 @@ export default function BarberLandingPage() {
                 className="animate-fade-up-1 text-[#C9A04C] text-xs font-semibold tracking-[0.3em] uppercase mb-5"
               font-sans 
               >
-                Premium Grooming · Est. 2010
+                He & She Salon · Hair · Makeup · Beauty
               </p>
 
               {/* Headline */}
               <h1
                 className="animate-fade-up-2 lg:text-[72px] md:text-[55px] text-[38px] text-white font-bold leading-[1.08] mb-6">
-                We Are Looking<br />
-                To Make You<br />
-                <span className="text-[#C9A04C]">Handsome</span>
+                Style That Defines
+<br />
+                Your
+                <span className="text-[#C9A04C]"> Personality</span>
               </h1>
 
               {/* Subtitle */}
