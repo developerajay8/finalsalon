@@ -4,37 +4,37 @@ import { useState, useEffect, useRef } from "react";
 
 const GALLERY_ITEMS = [
   {
-    img: "/about.png",
+    img: "/f1.png",
     title: "Executive Precision Cut",
     desc: "A refined haircut tailored for leaders — sharp lines, clean finish, and unmatched sophistication.",
     tag: "Haircut",
   },
   {
-    img: "/about.png",
+    img: "f2.png",
     title: "Elite Beard Craft",
     desc: "Sculpted with razor precision to enhance your jawline and elevate your presence.",
     tag: "Beard",
   },
   {
-    img: "/about.png",
+    img: "/f3.png",
     title: "Skin Fade Mastery",
     desc: "Seamless gradients blended to perfection — bold, clean, and undeniably modern.",
     tag: "Fade",
   },
   {
-    img: "/about.png",
+    img: "image copy 4.png",
     title: "Luxury Hot Towel Ritual",
     desc: "Indulge in a relaxing shave experience with warm towels, rich lather, and smooth precision.",
     tag: "Shave",
   },
   {
-    img: "/about.png",
+    img: "image copy 5.png",
     title: "Modern Textured Style",
     desc: "Crafted volume and natural movement designed to hold shape and style all day.",
     tag: "Style",
   },
   {
-    img: "/about.png",
+    img: "image copy 6.png",
     title: "Signature Royal Package",
     desc: "An all-in-one grooming experience — haircut, beard styling, facial care, and relaxation.",
     tag: "Premium",

@@ -274,7 +274,7 @@ export default function AboutServices() {
                   className="text-[#C9A04C] font-bold text-lg leading-none mb-1"
                   
                 >
-                  12+
+                  4+
                 </p>
                 <p
                   className="text-white/55 text-xs tracking-[0.12em] uppercase"

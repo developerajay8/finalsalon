@@ -177,10 +177,9 @@ Date: ${form.date}`;
         </div>
 
         {/* ── Centre form ── */}
-        <div
+        <div className="py-[68px] md:px-[52px] px-4"
           style={{
             background: "#805808",
-            padding: "68px 52px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",

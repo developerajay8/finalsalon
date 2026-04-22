@@ -37,62 +37,74 @@ const photos: {
 }[] = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=800&fit=crop",
-    label: "Classic Fade",
+    src: "image copy 7.png",
+    label: "Office image",
     span: "tall",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=400&fit=crop",
+    src: "/g2.png",
     label: "Scissor Work",
     span: "normal",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&h=400&fit=crop",
+    src: "/g3.png",
     label: "Beard Sculpt",
     span: "normal",
   },
-  {
+   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&h=400&fit=crop",
+    src: "image copy 8.png",
+    label: "He&She Salon",
+    span: "normal",
+  },
+  {
+    id: 18,
+    src: "/g4.png",
     label: "The Full Look",
     span: "wide",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&h=400&fit=crop",
+    src: "/g5.png",
     label: "Sharp Lines",
     span: "normal",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&h=800&fit=crop",
+    src: "g6.png",
     label: "Hot Towel Shave",
     span: "tall",
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1570158268183-d296b2892211?w=600&h=400&fit=crop",
+    src: "g7.png",
     label: "Texture & Style",
     span: "normal",
   },
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1536520002442-39364ab98ece?w=800&h=400&fit=crop",
-    label: "The Barbershop",
+    src: "image copy 10.png",
+    label: "office image",
     span: "wide",
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=400&fit=crop",
+    src: "g8.png",
     label: "Precision Cut",
     span: "normal",
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=600&h=400&fit=crop",
+    src: "g9.png",
     label: "Hair Colour",
+    span: "normal",
+  },
+  {
+    id: 14,
+    src: "image copy 9.png",
+    label: "office image",
     span: "normal",
   },
 ];
@@ -120,8 +132,10 @@ export default function GallerySectionTwo() {
     <section className="bg-[#100c06] py-20 md:py-28 overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
 
-        {/* ── Section Title ── */}
-        <div
+       
+
+        {/* Section Heading */}
+         <div
           ref={titleRef.ref}
           className="text-center mb-14 transition-all duration-700 ease-out"
           style={{
@@ -129,26 +143,44 @@ export default function GallerySectionTwo() {
             transform: titleRef.visible ? "none" : "translateY(40px)",
             fontFamily: INTER,
           }}
-        >
-          <p className="text-[#C9A04C] text-xs font-semibold tracking-[0.3em] uppercase mb-3">
-            Our Work
-          </p>
-          <h2
-            className="text-white font-bold mb-4"
-            style={{ fontFamily: PLAYFAIR, fontSize: "clamp(28px,4vw,48px)" }}
           >
-            The Gallery
-          </h2>
-          <p className="text-white/45 text-sm max-w-sm mx-auto leading-relaxed">
-            Every cut tells a story. Browse our work and find your next look.
-          </p>
-          {/* Gold rule */}
-          <div className="flex items-center justify-center gap-3 mt-5">
-            <div className="h-px w-14 bg-[#C9A04C]/40" />
-            <div className="w-2 h-2 rounded-full bg-[#C9A04C]" />
-            <div className="h-px w-14 bg-[#C9A04C]/40" />
+            {/* Decorative lines */}
+            <div className="flex items-center justify-center gap-3.5 mb-5">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#C9A04C]" />
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="#C9A04C">
+                <rect x="4" y="0" width="2" height="10" />
+                <rect x="0" y="4" width="10" height="2" />
+              </svg>
+              <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#C9A04C]" />
+            </div>
+
+            <p
+              className="text-[#C9A04C] text-[10px] font-bold tracking-[0.35em] uppercase mb-3"
+              
+            >
+               Our Work
+            </p>
+
+            {/* Exact heading from screenshot */}
+            <h2
+              className="text-white font-bold mb-4 leading-[1.08]"
+              
+              style={{
+                fontFamily: PLAYFAIR,
+                fontSize: "clamp(30px, 4vw, 52px)",
+              }}
+            >
+              The <span className="text-[#C9A04C]">Gallery</span>
+            </h2>
+
+            {/* Exact sub from screenshot */}
+            <p
+              className="text-white/50 text-sm md:text-base max-w-[420px] mx-auto leading-[1.7]"
+              
+            >Every cut tells a story. Browse our work and find your next look.
+              
+            </p>
           </div>
-        </div>
 
         {/* ── Masonry-style CSS Grid ── */}
         <div
@@ -217,7 +249,7 @@ export default function GallerySectionTwo() {
         </div>
 
         {/* ── View All Button ── */}
-        <div
+        {/* <div
           className="flex justify-center mt-12 transition-all duration-700"
           style={{
             opacity:   gridRef.visible ? 1 : 0,
@@ -232,7 +264,7 @@ export default function GallerySectionTwo() {
             View All Work
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* ════════════════════════════════════════

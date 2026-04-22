@@ -342,10 +342,10 @@ export default function FooterSection() {
       ══════════════════════════════════════ */}
       <div
         ref={statsRef}
+         className="pt-[60px] sm:px-[40px] px-4"
         style={{
           maxWidth: "1280px",
           margin: "0 auto",
-          padding: "60px 40px 0",
           opacity: statsVisible ? 1 : 0,
           transform: statsVisible ? "translateY(0)" : "translateY(32px)",
           transition: "opacity 0.8s ease, transform 0.8s cubic-bezier(.22,.68,0,1.2)",
@@ -394,7 +394,8 @@ export default function FooterSection() {
       ══════════════════════════════════════ */}
       <div
         ref={footerRef}
-        style={{ maxWidth: "1280px", margin: "0 auto", padding: "72px 40px 52px" }}
+        className="pt-[72px] pb-[52px] sm:px-[40px] px-4"
+        style={{ maxWidth: "1280px", margin: "0 auto" }}
       >
         <div className="footer-grid">
 
@@ -413,7 +414,7 @@ export default function FooterSection() {
               marginBottom: "28px",
               maxWidth: "280px",
             }}>
-              More than just a barbershop — we&apos;re a lifestyle destination for the modern gentleman. Est. 2010, Jaipur.
+              More than just a barbershop — we&apos;re a lifestyle destination for the modern gentleman, Jaipur.
             </p>
 
             {/* Socials */}
