@@ -26,7 +26,7 @@ const SERVICES = [
 ];
 
 export default function ContactSection() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", date: "", message: "" });
+  const [form, setForm] = useState({ name: "", phone: "", service: "", date: "" });
   const [sent, setSent] = useState(false);
   const [focused, setFocused] = useState("");
   const [sectionRef, sectionVisible] = useInView(0.08);
@@ -299,10 +299,10 @@ Date: ${form.date}`;
           ) : (
             <div style={{ display: "flex", flexDirection: "column", gap: "13px" }}>
               {/* Row 1 */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "13px" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "13px" }}>
                 {[
                   { key: "name", placeholder: "Your Full Name", type: "text" },
-                  { key: "email", placeholder: "Email Address", type: "email" },
+                  // { key: "email", placeholder: "Email Address", type: "email" },
                 ].map(({ key, placeholder, type }) => (
                   <input
                     key={key}
@@ -355,7 +355,7 @@ Date: ${form.date}`;
               />
 
               {/* Message */}
-              <textarea
+              {/* <textarea
                 className="contact-input"
                 placeholder="Write your message (optional)"
                 value={form.message}
@@ -364,7 +364,7 @@ Date: ${form.date}`;
                 onFocus={() => setFocused("message")}
                 onBlur={() => setFocused("")}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-              />
+              /> */}
 
               {/* Submit */}
               <button className="submit-btn" onClick={handleSubmit}>
